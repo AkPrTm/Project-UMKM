@@ -1,0 +1,602 @@
+/* ============================================================
+   ProGear Store — Stylesheet Utama
+   Tema: Gaming UMKM (dark neon)
+   Struktur:
+     1. Reset & Box-sizing
+     2. Design Tokens (:root)
+     3. Base / Body
+     4. Layout — Container
+     5. Tipografi (skala rem)
+     6. Navigasi
+     7. Tombol
+     8. Komponen (card, table, form, feature, dsb)
+     9. Utilitas & Aksesibilitas
+   ============================================================ */
+
+/* ============================================================
+   1. RESET & BOX-SIZING
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* ✅ checklist #1 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ============================================================
+   2. DESIGN TOKENS (:root)
+   ============================================================ */
+:root {
+  /* ---------- Skema warna 4-peran (lolos WCAG AA) ---------- */
+  /*   1. LATAR     = background halaman                        */
+  /*   2. TEKS      = warna teks utama                          */
+  /*   3. UTAMA     = brand / CTA                               */
+  /*   4. AKSEN     = highlight / border dekoratif              */
+  --warna-latar: #0e1116; /* Latar — dark slate        */
+  --warna-permukaan: #161b22; /* Surface (kartu, header)   */
+  --warna-permukaan-2: #1f2630; /* Surface alt (input)       */
+
+  --warna-teks: #eaeef5; /* Teks utama   (≈15.2:1)    */
+  --warna-teks-muted: #a8b3c1; /* Teks sekunder (≈7.8:1)    */
+
+  --warna-utama: #22d3ee; /* Cyan neon — brand utama   */
+  --warna-utama-ink: #05161a; /* Teks di atas --warna-utama */
+
+  --warna-aksen: #a855f7; /* Ungu neon — dekoratif     */
+  --warna-border: #2a323d; /* Garis pemisah             */
+  --warna-fokus: #facc15; /* Ring fokus (kuning)       */
+  --warna-error: #ff5c7a; /* State invalid form        */
+
+  /* ---------- Font ---------- */
+  --font-utama:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+  /* ---------- Spacing scale (kelipatan 4px) ---------- */
+  --sp-1: 0.25rem; /*  4px */
+  --sp-2: 0.5rem; /*  8px */
+  --sp-3: 1rem; /* 16px */
+  --sp-4: 1.5rem; /* 24px */
+  --sp-5: 2rem; /* 32px */
+  --sp-6: 3rem; /* 48px */
+  --sp-7: 4rem; /* 64px */
+
+  /* ---------- Radius, shadow, transisi ---------- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --bayang: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --bayang-neon:
+    0 0 0 1px var(--warna-utama), 0 0 24px rgba(34, 211, 238, 0.25);
+  --transisi: 0.2s ease;
+
+  /* ---------- Lebar kontainer ---------- */
+  --lebar-konten: 1080px;
+}
+
+/* ============================================================
+   3. BASE / BODY
+   ============================================================ */
+body {
+  font-family: var(--font-utama); /* ✅ checklist #3 */
+  font-size: 1rem; /* 16px            */
+  line-height: 1.6;
+  color: var(--warna-teks);
+  background-color: var(--warna-latar);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+p {
+  max-width: 68ch;
+}
+strong {
+  color: var(--warna-teks);
+  font-weight: 700;
+}
+a {
+  color: var(--warna-utama);
+  text-decoration: none;
+  transition: color var(--transisi);
+}
+a:hover {
+  color: #67e8f9;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   4. LAYOUT — CONTAINER
+   ============================================================ */
+.container {
+  /* ✅ checklist #8 */
+  width: 100%;
+  max-width: var(--lebar-konten);
+  margin-inline: auto; /* margin: 0 auto */
+  padding-inline: var(--sp-3);
+}
+
+section {
+  padding-block: var(--sp-6);
+}
+
+/* ============================================================
+   5. TIPOGRAFI — SKALA REM (h1..h3)
+   ============================================================ */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--warna-teks);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--sp-3);
+} /* 40px */
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--sp-3);
+} /* 28px */
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--sp-2);
+} /* 20px */
+h4 {
+  font-size: 1.125rem;
+  margin-bottom: var(--sp-2);
+} /* 18px */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  } /* 48px di desktop */
+  h2 {
+    font-size: 2rem;
+  } /* 32px            */
+  h3 {
+    font-size: 1.375rem;
+  } /* 22px            */
+}
+
+section > h2 {
+  /* aksen garis kiri */
+  border-left: 4px solid var(--warna-aksen);
+  padding-left: var(--sp-2);
+}
+
+small {
+  font-size: 0.875rem;
+  color: var(--warna-teks-muted);
+}
+
+/* ============================================================
+   6. NAVIGASI
+   ============================================================ */
+.site-header {
+  background-color: var(--warna-permukaan);
+  border-bottom: 1px solid var(--warna-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+  padding-block: var(--sp-3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+  color: var(--warna-utama);
+  text-decoration: none; /* ✅ checklist #6 */
+}
+
+.nav-list {
+  /* ✅ checklist #6 */
+  display: flex;
+  gap: var(--sp-2);
+  list-style: none; /* tanpa bullet */
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--warna-teks);
+  text-decoration: none; /* tanpa underline */
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition:
+    color var(--transisi),
+    background-color var(--transisi);
+}
+
+.nav-list a:hover {
+  /* ✅ hover */
+  color: var(--warna-utama);
+  background-color: var(--warna-permukaan-2);
+  text-decoration: none;
+}
+
+.nav-list a[aria-current="page"] {
+  color: var(--warna-utama);
+  font-weight: 700;
+  border-bottom: 3px solid var(--warna-utama);
+  border-radius: 0;
+}
+
+/* ============================================================
+   7. TOMBOL (.tombol) — hover + focus
+   ============================================================ */
+.tombol {
+  /* ✅ checklist #7 */
+  display: inline-block;
+  padding: var(--sp-2) var(--sp-4);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--transisi),
+    color var(--transisi),
+    transform var(--transisi);
+}
+
+.tombol-utama {
+  background-color: var(--warna-utama);
+  color: var(--warna-utama-ink);
+}
+
+.tombol-utama:hover {
+  background-color: #67e8f9;
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--warna-utama-ink);
+}
+
+.tombol-utama:focus-visible {
+  /* ✅ focus */
+  outline: 3px solid var(--warna-fokus);
+  outline-offset: 3px;
+}
+
+.tombol-utama:active {
+  transform: translateY(0);
+}
+
+.tombol-sekunder {
+  background: transparent;
+  color: var(--warna-utama);
+  border-color: var(--warna-utama);
+}
+.tombol-sekunder:hover {
+  background-color: var(--warna-utama);
+  color: var(--warna-utama-ink);
+}
+.tombol-sekunder:focus-visible {
+  outline: 3px solid var(--warna-fokus);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   8. KOMPONEN
+   ============================================================ */
+
+/* ---------- 8.1 Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, #0e1116 0%, #1a1230 100%);
+  padding-block: var(--sp-7);
+  border-bottom: 1px solid var(--warna-border);
+}
+.hero p {
+  color: var(--warna-teks-muted);
+  margin-bottom: var(--sp-4);
+  font-size: 1.0625rem;
+}
+
+/* ---------- 8.2 Feature list (Mengapa Memilih Kami) ---------- */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-3);
+}
+.feature-list > li {
+  background-color: var(--warna-permukaan);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  transition:
+    border-color var(--transisi),
+    box-shadow var(--transisi);
+}
+.feature-list > li:hover {
+  border-color: var(--warna-utama);
+  box-shadow: var(--bayang-neon);
+}
+.feature-list h3 {
+  color: var(--warna-utama);
+}
+
+/* ---------- 8.3 Produk grid (Beranda) ---------- */
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-3);
+}
+.produk-card {
+  background-color: var(--warna-permukaan);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  transition:
+    border-color var(--transisi),
+    box-shadow var(--transisi);
+}
+.produk-card:hover {
+  border-color: var(--warna-utama);
+  box-shadow: var(--bayang);
+}
+.produk-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: var(--warna-permukaan-2);
+  margin-bottom: var(--sp-2);
+}
+.produk-card h3 {
+  color: var(--warna-teks);
+}
+.produk-card p {
+  color: var(--warna-teks-muted);
+  font-size: 0.9375rem;
+}
+
+/* ---------- 8.4 Produk item (Katalog) ---------- */
+.produk-item {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+  padding-block: var(--sp-4);
+  border-bottom: 1px solid var(--warna-border);
+}
+@media (max-width: 640px) {
+  .produk-item {
+    grid-template-columns: 1fr;
+  }
+}
+.produk-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background-color: var(--warna-permukaan-2);
+}
+.produk-item h2 {
+  font-size: 1.375rem;
+}
+
+.harga {
+  color: var(--warna-utama);
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+/* ---------- 8.5 Form kontak ---------- */
+.contact-form {
+  max-width: 640px;
+  margin-top: var(--sp-3);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-3);
+}
+.form-group.checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--sp-2);
+}
+label {
+  font-weight: 600;
+  color: var(--warna-teks);
+}
+
+input,
+select,
+textarea {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--warna-permukaan-2);
+  color: var(--warna-teks);
+  transition:
+    border-color var(--transisi),
+    box-shadow var(--transisi);
+}
+input::placeholder,
+textarea::placeholder {
+  color: #7c8794;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--warna-fokus);
+  outline-offset: 2px;
+  border-color: var(--warna-utama);
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:focus),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--warna-error);
+}
+
+fieldset {
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  margin-bottom: var(--sp-3);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+legend {
+  font-weight: 700;
+  color: var(--warna-utama);
+  padding-inline: var(--sp-2);
+}
+
+/* ---------- 8.6 Tabel ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--warna-permukaan);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-size: 0.9375rem;
+}
+caption {
+  text-align: left;
+  color: var(--warna-teks-muted);
+  font-style: italic;
+  padding-block: var(--sp-2);
+}
+th,
+td {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--warna-border);
+  text-align: left;
+}
+thead th {
+  background-color: var(--warna-permukaan-2);
+  color: var(--warna-utama);
+  font-weight: 700;
+}
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+tbody tr:hover {
+  background-color: rgba(34, 211, 238, 0.06);
+}
+tfoot th,
+tfoot td {
+  background-color: var(--warna-permukaan-2);
+  font-weight: 700;
+}
+
+/* ---------- 8.7 Footer ---------- */
+.site-footer {
+  background-color: #05070a;
+  border-top: 1px solid var(--warna-border);
+  padding-block: var(--sp-5);
+  margin-top: var(--sp-6);
+  color: var(--warna-teks);
+}
+.site-footer p {
+  color: var(--warna-teks-muted);
+}
+.site-footer a {
+  color: var(--warna-utama);
+}
+.site-footer address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   9. UTILITAS & AKSESIBILITAS
+   ============================================================ */
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: var(--warna-utama);
+  color: var(--warna-utama-ink);
+  padding: var(--sp-2) var(--sp-3);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) 0;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Focus visible umum */
+:focus-visible {
+  outline: 3px solid var(--warna-fokus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

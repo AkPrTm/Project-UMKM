@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ProGear Store - UMKM penjualan perlengkapan gaming: mouse, keyboard mekanikal, headset, controller, dan aksesori gaming original bergaransi."
+    />
+    <title>ProGear Store — Perlengkapan Gaming Original &amp; Bergaransi</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ============ SKIP LINK ============ -->
+    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="ProGear Store - Beranda">
+          <img src="images/logo.svg" alt="" width="40" height="40" />
+          <span>ProGear Store</span>
+        </a>
+
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Beranda</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ MAIN ============ -->
+    <main id="main-content">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <h1 id="hero-title">Upgrade Setup Gaming-mu Hari Ini</h1>
+          <p>
+            Perlengkapan gaming original, bergaransi resmi, dan harga bersaing.
+            Dikirim dari Bandung ke seluruh Indonesia dalam 1×24 jam.
+          </p>
+          <a href="katalog.html" class="btn btn-primary">Lihat Katalog</a>
+        </div>
+      </section>
+
+      <!-- TENTANG -->
+      <section id="tentang" aria-labelledby="tentang-title">
+        <div class="container">
+          <h2 id="tentang-title">Tentang Kami</h2>
+          <p>
+            ProGear Store adalah UMKM yang berdiri sejak 2020 dan fokus menjual
+            perlengkapan gaming original bergaransi resmi. Kami bekerja sama
+            langsung dengan distributor resmi merek-merek ternama, sehingga
+            setiap produk yang dikirim dijamin 100% asli, bukan replica atau
+            refurbished.
+          </p>
+        </div>
+      </section>
+
+      <!-- KEUNGGULAN -->
+      <section id="keunggulan" aria-labelledby="keunggulan-title">
+        <div class="container">
+          <h2 id="keunggulan-title">Mengapa Memilih Kami</h2>
+          <ul class="feature-list">
+            <li>
+              <h3>100% Original</h3>
+              <p>Semua produk bergaransi resmi distributor Indonesia.</p>
+            </li>
+            <li>
+              <h3>Pengiriman Cepat</h3>
+              <p>Order sebelum jam 15.00 WIB dikirim hari yang sama.</p>
+            </li>
+            <li>
+              <h3>Garansi Tukar 7 Hari</h3>
+              <p>Rusak dalam pengiriman? Kami ganti unit baru tanpa ribet.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PRODUK UNGGULAN -->
+      <section id="produk-unggulan" aria-labelledby="produk-title">
+        <div class="container">
+          <h2 id="produk-title">Produk Unggulan</h2>
+          <p>
+            Beberapa varian terlaris bulan ini.
+            <a href="katalog.html">Lihat semua produk →</a>
+          </p>
+
+          <div class="produk-grid">
+            <article class="produk-card">
+              <img
+                src="images/mouse-rgb.jpg"
+                alt="Mouse gaming RGB dengan sensor 16.000 DPI berwarna hitam"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <h3>ProGear Viper X1</h3>
+              <p>Mouse gaming RGB, sensor 16.000 DPI, 8 tombol programmable.</p>
+              <p class="harga">Rp 350.000</p>
+            </article>
+
+            <article class="produk-card">
+              <img
+                src="images/keyboard-mech.jpg"
+                alt="Keyboard mekanikal RGB dengan switch biru dan keycaps hitam"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <h3>ProGear Strike 87</h3>
+              <p>Keyboard mekanikal TKL, hot-swappable, RGB per-key.</p>
+              <p class="harga">Rp 650.000</p>
+            </article>
+
+            <article class="produk-card">
+              <img
+                src="images/headset-pro.jpg"
+                alt="Headset gaming over-ear dengan mikrofon detachable dan earcup hitam"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <h3>ProGear Sonic 7.1</h3>
+              <p>Headset virtual 7.1 surround, mic detachable, kabel 2m.</p>
+              <p class="harga">Rp 480.000</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAK -->
+      <section id="kontak" aria-labelledby="kontak-title">
+        <div class="container">
+          <h2 id="kontak-title">Hubungi Kami</h2>
+          <p>Isi formulir di bawah — kami balas maksimal 1×24 jam kerja.</p>
+
+          <form
+            action="https://formspree.io/f/xxxxxxx"
+            method="post"
+            class="contact-form"
+            aria-describedby="form-note"
+          >
+            <p id="form-note" class="form-note">
+              Kolom bertanda <span aria-hidden="true">*</span
+              ><span class="sr-only">wajib</span> harus diisi.
+            </p>
+
+            <fieldset>
+              <legend>Data Diri</legend>
+
+              <div class="form-group">
+                <label for="nama"
+                  >Nama Lengkap <span aria-hidden="true">*</span
+                  ><span class="sr-only">(wajib)</span></label
+                >
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  required
+                  minlength="3"
+                  maxlength="80"
+                  autocomplete="name"
+                  aria-describedby="nama-hint"
+                />
+                <small id="nama-hint">Minimal 3 karakter.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="email"
+                  >Email <span aria-hidden="true">*</span
+                  ><span class="sr-only">(wajib)</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="nama@contoh.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="telepon">Nomor WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telepon"
+                  name="telepon"
+                  pattern="[0-9+\-\s]{9,15}"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  aria-describedby="telepon-hint"
+                />
+                <small id="telepon-hint"
+                  >Format: 0812-3456-7890 (opsional).</small
+                >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Detail Pesan</legend>
+
+              <div class="form-group">
+                <label for="topik"
+                  >Topik <span aria-hidden="true">*</span
+                  ><span class="sr-only">(wajib)</span></label
+                >
+                <select id="topik" name="topik" required>
+                  <option value="">— Pilih topik —</option>
+                  <option value="pembelian">Pembelian Produk</option>
+                  <option value="garansi">Klaim Garansi</option>
+                  <option value="grosir">Grosir / Reseller</option>
+                  <option value="kerja-sama">Kerja Sama Komunitas</option>
+                  <option value="lain">Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="produk-diminati">Produk yang Diminati</label>
+                <input
+                  type="text"
+                  id="produk-diminati"
+                  name="produk_diminati"
+                  list="produk-list"
+                  placeholder="Contoh: ProGear Viper X1"
+                  aria-describedby="produk-hint"
+                />
+                <datalist id="produk-list">
+                  <option value="ProGear Viper X1"></option>
+                  <option value="ProGear Strike 87"></option>
+                  <option value="ProGear Sonic 7.1"></option>
+                  <option value="ProGear ControlPad XL"></option>
+                  <option value="ProGear Wireless Pad"></option>
+                  <option value="ProGear StreamCam HD"></option>
+                  <option value="ProGear VoiceMic USB"></option>
+                </datalist>
+                <small id="produk-hint"
+                  >Opsional, tulis nama produk yang ingin ditanyakan.</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="pesan"
+                  >Pesan <span aria-hidden="true">*</span
+                  ><span class="sr-only">(wajib)</span></label
+                >
+                <textarea
+                  id="pesan"
+                  name="pesan"
+                  rows="6"
+                  required
+                  minlength="10"
+                  maxlength="1000"
+                  aria-describedby="pesan-hint"
+                ></textarea>
+                <small id="pesan-hint"
+                  >Minimal 10 karakter, maksimal 1000 karakter.</small
+                >
+              </div>
+
+              <div class="form-group checkbox">
+                <input
+                  type="checkbox"
+                  id="setuju"
+                  name="setuju"
+                  value="ya"
+                  required
+                />
+                <label for="setuju">
+                  Saya setuju data saya diproses untuk keperluan balasan pesan.
+                  <span aria-hidden="true">*</span
+                  ><span class="sr-only">(wajib)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 ProGear Store. Semua hak dilindungi.</p>
+        <address>
+          Jl. Cihampelas No. 88, Bandung, Jawa Barat<br />
+          <a href="mailto:halo@progearstore.id">halo@progearstore.id</a><br />
+          <a href="tel:+6281234567890">+62 812-3456-7890</a>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
