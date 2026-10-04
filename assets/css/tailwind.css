@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Custom Components Layer — ProGear Store
+   ============================================================ */
+@layer components {
+  /* Container */
+  .pg-container {
+    @apply w-full max-w-pg mx-auto px-4;
+  }
+
+  /* Skip Link */
+  .skip-link {
+    @apply absolute -left-[9999px] top-0 z-[100] bg-pg-primary text-pg-primary-ink px-4 py-2 font-bold rounded-br-md no-underline;
+  }
+  .skip-link:focus {
+    @apply left-0;
+  }
+
+  /* Tombol */
+  .btn {
+    @apply inline-block px-6 py-2 border-2 border-transparent rounded-md font-bold text-base text-center cursor-pointer transition-all duration-pg;
+  }
+  .btn-primary {
+    @apply bg-pg-primary text-pg-primary-ink;
+  }
+  .btn-primary:hover {
+    @apply bg-cyan-300 -translate-y-px no-underline text-pg-primary-ink;
+  }
+  .btn-primary:focus-visible {
+    @apply outline outline-[3px] outline-pg-focus outline-offset-[3px];
+  }
+  .btn-primary:active {
+    @apply translate-y-0;
+  }
+  .btn-secondary {
+    @apply bg-transparent text-pg-primary border-pg-primary;
+  }
+  .btn-secondary:hover {
+    @apply bg-pg-primary text-pg-primary-ink;
+  }
+  .btn-secondary:focus-visible {
+    @apply outline outline-[3px] outline-pg-focus outline-offset-[3px];
+  }
+
+  /* Form */
+  .form-group {
+    @apply flex flex-col gap-1 mb-4;
+  }
+  .form-group-checkbox {
+    @apply flex-row items-start gap-2;
+  }
+  .form-label {
+    @apply font-semibold text-pg-text;
+  }
+  .form-input {
+    @apply px-4 py-2 border border-pg-border rounded-md bg-pg-surface-2 text-pg-text transition-all duration-pg;
+  }
+  .form-input::placeholder {
+    @apply text-[#7c8794];
+  }
+  .form-input:focus-visible {
+    @apply outline outline-[3px] outline-pg-focus outline-offset-2 border-pg-primary;
+  }
+  .form-input:invalid:not(:placeholder-shown) {
+    @apply border-pg-error;
+  }
+
+  /* Feature List */
+  .feature-list {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4;
+  }
+  .feature-list > li {
+    @apply bg-pg-surface border border-pg-border rounded-lg p-6 transition-all duration-pg;
+  }
+  .feature-list > li:hover {
+    @apply border-pg-primary shadow-pg-neon;
+  }
+  .feature-list h3 {
+    @apply text-pg-primary;
+  }
+
+  /* Produk Grid (Beranda) */
+  .produk-grid {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4;
+  }
+  .produk-card {
+    @apply bg-pg-surface border border-pg-border rounded-lg p-4 transition-all duration-pg;
+  }
+  .produk-card:hover {
+    @apply border-pg-primary shadow-pg;
+  }
+  .produk-card img {
+    @apply w-full aspect-[4/3] object-cover rounded-md bg-pg-surface-2 mb-2;
+  }
+  .produk-card h3 {
+    @apply text-pg-text;
+  }
+  .produk-card p {
+    @apply text-pg-muted text-[0.9375rem];
+  }
+
+  /* Produk Item (Katalog) */
+  .produk-item {
+    @apply grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6 items-start py-6 border-b border-pg-border;
+  }
+  .produk-item img {
+    @apply w-full aspect-[4/3] object-cover rounded-lg bg-pg-surface-2;
+  }
+  .produk-item h2 {
+    @apply text-[1.375rem];
+  }
+
+  /* Harga */
+  .harga {
+    @apply text-pg-primary font-extrabold text-lg;
+  }
+
+  /* Tabel */
+  .pg-table {
+    @apply w-full border-collapse bg-pg-surface rounded-lg overflow-hidden text-[0.9375rem];
+  }
+  .pg-table caption {
+    @apply text-left text-pg-muted italic py-2;
+  }
+  .pg-table th,
+  .pg-table td {
+    @apply px-4 py-2 border border-pg-border text-left;
+  }
+  .pg-table thead th {
+    @apply bg-pg-surface-2 text-pg-primary font-bold;
+  }
+  .pg-table tbody tr:nth-child(even) {
+    @apply bg-white/[0.02];
+  }
+  .pg-table tbody tr:hover {
+    @apply bg-pg-primary/[0.06];
+  }
+  .pg-table tfoot th,
+  .pg-table tfoot td {
+    @apply bg-pg-surface-2 font-bold;
+  }
+}
+
+/* ============================================================
+   Base Layer Overrides
+   ============================================================ */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-sans text-base leading-relaxed text-pg-text bg-pg-bg antialiased min-h-screen;
+  }
+  p {
+    @apply max-w-[68ch];
+  }
+  strong {
+    @apply text-pg-text font-bold;
+  }
+  a {
+    @apply text-pg-primary no-underline transition-colors duration-pg;
+  }
+  a:hover {
+    @apply text-cyan-300 underline;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-extrabold leading-tight tracking-tight text-pg-text;
+  }
+  h1 {
+    @apply text-[2.5rem] mb-4 md:text-5xl;
+  }
+  h2 {
+    @apply text-[1.75rem] mb-4 md:text-[2rem];
+  }
+  h3 {
+    @apply text-xl mb-2 md:text-[1.375rem];
+  }
+  h4 {
+    @apply text-lg mb-2;
+  }
+  section > h2 {
+    @apply border-l-4 border-pg-accent pl-2;
+  }
+  small {
+    @apply text-sm text-pg-muted;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-pg-focus outline-offset-2 rounded-md;
+  }
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

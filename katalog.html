@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,33 +8,62 @@
       content="Katalog lengkap perlengkapan gaming ProGear Store: mouse, keyboard mekanikal, headset, mousepad, controller, webcam, dan mikrofon USB."
     />
     <title>Katalog Produk — ProGear Store</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/output.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="index.html" class="logo" aria-label="ProGear Store - Beranda">
+    <header class="bg-pg-surface border-b border-pg-border sticky top-0 z-50">
+      <div class="pg-container flex justify-between items-center gap-4 py-4">
+        <a
+          href="index.html"
+          class="flex items-center gap-2 font-extrabold text-lg tracking-wide text-pg-primary no-underline"
+          aria-label="ProGear Store - Beranda"
+        >
           <img src="images/logo.svg" alt="" width="40" height="40" />
           <span>ProGear Store</span>
         </a>
         <nav aria-label="Navigasi utama">
-          <ul class="nav-list">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="katalog.html" aria-current="page">Katalog</a></li>
-            <li><a href="index.html#tentang">Tentang</a></li>
-            <li><a href="index.html#kontak">Kontak</a></li>
+          <ul class="flex gap-2 list-none">
+            <li>
+              <a
+                href="index.html"
+                class="inline-block px-4 py-2 text-pg-text font-medium rounded-md no-underline transition-colors duration-pg hover:text-pg-primary hover:bg-pg-surface-2"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="katalog.html"
+                aria-current="page"
+                class="inline-block px-4 py-2 text-pg-primary font-bold border-b-[3px] border-pg-primary no-underline"
+                >Katalog</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#tentang"
+                class="inline-block px-4 py-2 text-pg-text font-medium rounded-md no-underline transition-colors duration-pg hover:text-pg-primary hover:bg-pg-surface-2"
+                >Tentang</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#kontak"
+                class="inline-block px-4 py-2 text-pg-text font-medium rounded-md no-underline transition-colors duration-pg hover:text-pg-primary hover:bg-pg-surface-2"
+                >Kontak</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section aria-labelledby="katalog-title">
-        <div class="container">
+      <section class="py-12" aria-labelledby="katalog-title">
+        <div class="pg-container">
           <h1 id="katalog-title">Katalog Produk</h1>
-          <p>
+          <p class="text-pg-muted">
             Tujuh produk pilihan untuk setup gaming dan streaming. Semua
             <strong>original</strong> dan <strong>bergaransi resmi</strong>.
           </p>
@@ -50,11 +79,11 @@
             />
             <div>
               <h2 id="p1-title">ProGear Viper X1 — Mouse Gaming</h2>
-              <p>
+              <p class="text-pg-muted">
                 Sensor optik 16.000 DPI, 8 tombol programmable, kabel paracord
                 1,8m.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> USB wired · <strong>Berat:</strong> 69
                 gram
               </p>
@@ -73,11 +102,11 @@
             />
             <div>
               <h2 id="p2-title">ProGear Strike 87 — Keyboard Mekanikal TKL</h2>
-              <p>
+              <p class="text-pg-muted">
                 Layout tenkeyless, hot-swappable, switch blue, keycaps PBT
                 double-shot.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> USB-C detachable ·
                 <strong>Backlight:</strong> RGB per-key
               </p>
@@ -96,11 +125,11 @@
             />
             <div>
               <h2 id="p3-title">ProGear Sonic 7.1 — Headset Gaming</h2>
-              <p>
+              <p class="text-pg-muted">
                 Virtual surround 7.1, driver 50mm, mikrofon noise-cancelling
                 detachable.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> USB + 3.5mm ·
                 <strong>Panjang kabel:</strong> 2 meter
               </p>
@@ -119,10 +148,10 @@
             />
             <div>
               <h2 id="p4-title">ProGear ControlPad XL — Mousepad</h2>
-              <p>
+              <p class="text-pg-muted">
                 Permukaan kain halus, dasar karet anti-slip, tepi dijahit rapi.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Ukuran:</strong> 900 × 400 × 4 mm ·
                 <strong>Warna:</strong> Hitam
               </p>
@@ -141,10 +170,10 @@
             />
             <div>
               <h2 id="p5-title">ProGear Wireless Pad — Controller</h2>
-              <p>
+              <p class="text-pg-muted">
                 Dual analog, trigger analog, getaran haptic, baterai 800mAh.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> Bluetooth 5.0 / USB-C ·
                 <strong>Kompatibel:</strong> PC, Android, Switch
               </p>
@@ -163,11 +192,11 @@
             />
             <div>
               <h2 id="p6-title">ProGear StreamCam HD — Webcam 1080p</h2>
-              <p>
+              <p class="text-pg-muted">
                 Resolusi 1080p 60fps, autofocus, mikrofon built-in dengan noise
                 reduction.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> USB-A ·
                 <strong>Field of view:</strong> 90°
               </p>
@@ -186,11 +215,11 @@
             />
             <div>
               <h2 id="p7-title">ProGear VoiceMic USB — Mikrofon Streaming</h2>
-              <p>
+              <p class="text-pg-muted">
                 Pola cardioid, sample rate 48kHz/24bit, plug and play tanpa
                 driver.
               </p>
-              <p>
+              <p class="text-pg-muted">
                 <strong>Koneksi:</strong> USB-A · <strong>Fitur:</strong> Mute
                 button &amp; LED indikator
               </p>
@@ -201,109 +230,117 @@
       </section>
 
       <!-- TABEL DATA TABULAR -->
-      <section aria-labelledby="tabel-harga-title">
-        <div class="container">
+      <section class="py-12" aria-labelledby="tabel-harga-title">
+        <div class="pg-container">
           <h2 id="tabel-harga-title">Daftar Harga &amp; Stok</h2>
-          <p>Update terakhir: 1 Desember 2025.</p>
+          <p class="text-pg-muted">Update terakhir: 1 Desember 2025.</p>
 
-          <table>
-            <caption>
-              Harga dan ketersediaan stok per 1 Desember 2025
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Produk</th>
-                <th scope="col">Kategori</th>
-                <th scope="col">Koneksi</th>
-                <th scope="col">Garansi</th>
-                <th scope="col">Harga</th>
-                <th scope="col">Stok</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">ProGear Viper X1</th>
-                <td>Mouse</td>
-                <td>USB Wired</td>
-                <td>1 tahun</td>
-                <td>Rp 350.000</td>
-                <td>85</td>
-                <td>Tersedia</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear Strike 87</th>
-                <td>Keyboard</td>
-                <td>USB-C</td>
-                <td>1 tahun</td>
-                <td>Rp 650.000</td>
-                <td>42</td>
-                <td>Tersedia</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear Sonic 7.1</th>
-                <td>Headset</td>
-                <td>USB + 3.5mm</td>
-                <td>1 tahun</td>
-                <td>Rp 480.000</td>
-                <td>60</td>
-                <td>Tersedia</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear ControlPad XL</th>
-                <td>Mousepad</td>
-                <td>—</td>
-                <td>3 bulan</td>
-                <td>Rp 150.000</td>
-                <td>150</td>
-                <td>Tersedia</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear Wireless Pad</th>
-                <td>Controller</td>
-                <td>Bluetooth 5.0</td>
-                <td>6 bulan</td>
-                <td>Rp 420.000</td>
-                <td>18</td>
-                <td>Stok terbatas</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear StreamCam HD</th>
-                <td>Webcam</td>
-                <td>USB-A</td>
-                <td>1 tahun</td>
-                <td>Rp 550.000</td>
-                <td>25</td>
-                <td>Tersedia</td>
-              </tr>
-              <tr>
-                <th scope="row">ProGear VoiceMic USB</th>
-                <td>Mikrofon</td>
-                <td>USB-A</td>
-                <td>1 tahun</td>
-                <td>Rp 475.000</td>
-                <td>0</td>
-                <td>Habis</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row" colspan="4">Rata-rata harga</th>
-                <td>Rp 439.286</td>
-                <td colspan="2">Total stok: 380 unit</td>
-              </tr>
-            </tfoot>
-          </table>
+          <div class="overflow-x-auto mt-4">
+            <table class="pg-table">
+              <caption>
+                Harga dan ketersediaan stok per 1 Desember 2025
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Produk</th>
+                  <th scope="col">Kategori</th>
+                  <th scope="col">Koneksi</th>
+                  <th scope="col">Garansi</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Stok</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">ProGear Viper X1</th>
+                  <td>Mouse</td>
+                  <td>USB Wired</td>
+                  <td>1 tahun</td>
+                  <td>Rp 350.000</td>
+                  <td>85</td>
+                  <td>Tersedia</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear Strike 87</th>
+                  <td>Keyboard</td>
+                  <td>USB-C</td>
+                  <td>1 tahun</td>
+                  <td>Rp 650.000</td>
+                  <td>42</td>
+                  <td>Tersedia</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear Sonic 7.1</th>
+                  <td>Headset</td>
+                  <td>USB + 3.5mm</td>
+                  <td>1 tahun</td>
+                  <td>Rp 480.000</td>
+                  <td>60</td>
+                  <td>Tersedia</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear ControlPad XL</th>
+                  <td>Mousepad</td>
+                  <td>—</td>
+                  <td>3 bulan</td>
+                  <td>Rp 150.000</td>
+                  <td>150</td>
+                  <td>Tersedia</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear Wireless Pad</th>
+                  <td>Controller</td>
+                  <td>Bluetooth 5.0</td>
+                  <td>6 bulan</td>
+                  <td>Rp 420.000</td>
+                  <td>18</td>
+                  <td>Stok terbatas</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear StreamCam HD</th>
+                  <td>Webcam</td>
+                  <td>USB-A</td>
+                  <td>1 tahun</td>
+                  <td>Rp 550.000</td>
+                  <td>25</td>
+                  <td>Tersedia</td>
+                </tr>
+                <tr>
+                  <th scope="row">ProGear VoiceMic USB</th>
+                  <td>Mikrofon</td>
+                  <td>USB-A</td>
+                  <td>1 tahun</td>
+                  <td>Rp 475.000</td>
+                  <td>0</td>
+                  <td>Habis</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="4">Rata-rata harga</th>
+                  <td>Rp 439.286</td>
+                  <td colspan="2">Total stok: 380 unit</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2025 ProGear Store. Semua hak dilindungi.</p>
-        <address>
+    <footer
+      class="bg-[#05070a] border-t border-pg-border py-8 mt-12 text-pg-text"
+    >
+      <div class="pg-container">
+        <p class="text-pg-muted">
+          &copy; 2025 ProGear Store. Semua hak dilindungi.
+        </p>
+        <address class="not-italic leading-relaxed">
           Jl. Cihampelas No. 88, Bandung, Jawa Barat<br />
-          <a href="mailto:halo@progearstore.id">halo@progearstore.id</a>
+          <a href="mailto:halo@progearstore.id" class="text-pg-primary"
+            >halo@progearstore.id</a
+          >
         </address>
       </div>
     </footer>
